@@ -9,20 +9,13 @@
  * 4. The publisher
  * 5. The year of publication
  * 6. Whether the book is circulating or noncirculating
+ * 
+ * Note: this class extends nothing so by default it's just
+ * an object.
  */
 
-import acm.program.*;
-
-public class CS106A_LibraryRecord extends ConsoleProgram
+public class CS106A_LibraryRecord
 {
-	/** Private named constants */
-	private String title;
-	private String author;
-	private String publisher;
-	private int yearPublished;
-	private static String catalogNumber;
-	private boolean circulating;
-	
 	public CS106A_LibraryRecord(String title,
 			String author, String publisher,
 			int yearPublished, String catalogNumber,
@@ -94,4 +87,12 @@ public class CS106A_LibraryRecord extends ConsoleProgram
 		
 		return stats;
 	}
+	
+	/** Private named constants */
+	private String title; /** The book's title */
+	private String author; /** The book's author */
+	private String publisher; /** The book's publisher */
+	private int yearPublished; /** The year the book was published */
+	private static String catalogNumber; /** The book's Library of Congress catalog number */
+	private boolean circulating; /** The book's circulation status */
 }
